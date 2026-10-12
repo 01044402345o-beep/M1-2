@@ -1,0 +1,23 @@
+# Render Blueprint: New > Blueprint 에서 이 저장소를 선택하면 아래 설정으로 Web Service 가 생성된다.
+services:
+  - type: web
+    name: m1-2-api
+    runtime: python
+    plan: free
+    rootDir: backend
+    buildCommand: pip install -r requirements.txt
+    startCommand: uvicorn main:app --host 0.0.0.0 --port $PORT
+    healthCheckPath: /health
+    envVars:
+      - key: PYTHON_VERSION
+        value: 3.12.7
+      - key: OPENAI_MODEL
+        value: gpt-4o-mini
+      - key: OPENAI_MAX_TOKENS
+        value: "500"
+      - key: OPENAI_API_KEY
+        sync: false
+      - key: FIREBASE_SERVICE_ACCOUNT_JSON
+        sync: false
+      - key: ALLOWED_ORIGINS
+        sync: false

@@ -1,0 +1,7 @@
+{
+  "name": "m1-2-frontend",
+  "private": true,
+  "scripts": {
+    "build": "node generate-config.js"
+  }
+}

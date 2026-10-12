@@ -1,0 +1,23 @@
+# 비밀 정보 (절대 커밋 금지)
+.env
+*.env
+!.env.example
+serviceAccount*.json
+*firebase-adminsdk*.json
+
+# Python
+.venv/
+venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+
+# Node / Vercel
+node_modules/
+.vercel/
+
+# OS / IDE
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
